@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class=flashes>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+    <div class="container">
+        <div class="left">
+
+      
+        <h1>{{ today.strftime('%B %Y') }} Events Calendar</h1>
+
+        
+
+        <!-- Calendar -->
+        <div class="calendar">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for week in month_calendar %}
+                        <tr>
+                            {% for day in week %}
+                                {% if day == 0 %}
+                                    <td class="empty"></td>
+                                {% else %}
+                                    <td class="{% if today.day == day %}today {% else %} day{% endif %}">
+                                            {{day}}
+                                        {% for event in events %}
+                                            {% if event.date.day == day %}
+                                            <br>
+
+                                                <p class="event {{ event.event_type }}">{{ event.title }}</p>
+                                               
+                                            
+                                            {% endif %}
+                                        {% endfor %}
+                                        
+                                    </td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<div class="right">
+
+
+        <!-- Today's Events -->
+        <h2>Today's Events:</h2>
+        <ul class="card ">
+            {% for event in todays_events %}
+                <li class="{{ event.event_type}}">{{ event.title }} - {{ event.event_type }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+
+        <h2>All Events in this month</h2>
+        <ul class="ul1">
+            {% for event in events %}
+                <li>{{ event.title }} |  {{ event.date.strftime('%d %B') }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+
+        <!-- Add Event Form -->
+        <h2>Add New Event</h2>
+        <form action="/add_event" method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="event_type">Type:</label>
+            <select id="event_type" name="event_type" required>
+                <option value="festival">Festival</option>
+                <option value="user-created">User Created</option>
+                <option value="birthday">Birthday</option>
+                <option value="regular">Regular</option>
+            </select><br>
+            <button type="submit">Add Event</button>
+        </form>
+
+    </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.left{
+    width: 60%;
+    
+}
+.right{
+    width: 40%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}   
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.flashes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flashes li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.calendar th, .calendar td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.calendar th {
+    background-color: gray;
+    color: white;
+    font-size: 30px;
+}
+.calendar tr {
+    height: 100px;
+}
+.calendar td {
+
+    width: 400px;
+    
+}
+.day{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.today {
+    font-size: 50px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.empty {
+    background-color: #f8f9fa;
+}
+
+.event {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.festival {
+    background-color: #ffd351;
+    color: #fff;
+}
+
+.user-created {
+    background-color: #70d688;
+    color: #fff;
+}
+
+.birthday {
+    background-color: #f35b6a;
+    color: #fff;
+}
+
+.regular {
+    background-color: #79c1ff;
+    color: #fff;
+}
+
+
+#edit{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#edit:hover {
+    background-color: #0056b3;
+}
+
+#delete{
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#delete:hover {
+    background-color: #c82333;
+}
+
+
+h2 {
+    margin-top: 20px;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Style for Today's Events section */
+ul.card {
+    background-color: #f9f9f9; /* Light gray background for the list */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center-align and add margin around the list */
+    max-width: 600px; /* Maximum width of the list */
+    padding: 20px; /* Padding inside the list */
+    list-style-type: none; /* Remove default bullet points */
+}
+
+/* Style for each Today's Events item */
+ul.card li {
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    padding: 12px; /* Padding inside each item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for Today's Events items */
+ul.card li:hover {
+    transform: translateY(-5px); /* Lift the item slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+}
+
+/* Event type styles for Today's Events items */
+ul.card li.conference {
+    background-color: #ffcc99; /* Light orange background */
+}
+ul.card li.workshop {
+    background-color: #aaffaa; /* Light green background */
+}
+ul.card li.meeting {
+    background-color: #ccccff; /* Light blue background */
+}
+
+/* Style for All Events in this month section */
+ul.ul1 {
+    background-color: #f9f9f9; /* Light gray background for the list */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center-align and add margin around the list */
+    max-width: 600px; /* Maximum width of the list */
+    padding: 20px; /* Padding inside the list */
+    list-style-type: none; /* Remove default bullet points */
+}
+
+/* Style for each All Events in this month item */
+ul.ul1 li {
+    background-color: #ffffff; /* White background for each item */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    padding: 12px; /* Padding inside each item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for All Events in this month items */
+ul.ul1 li:hover {
+    transform: translateY(-5px); /* Lift the item slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+}
+
+/* Horizontal line (hr) style */
+hr {
+    border: none; /* Remove default border */
+    height: 2px; /* Thickness of the hr */
+    background-color: #cccccc; /* Light gray color for the hr */
+    margin: 20px auto; /* Center-align and add margin around the hr */
+}
+
+
+@media (max-width: 1228px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .right {
+        width: 100%;
+        margin-left: 0;
+    }
+    .left{
+        width: 100%;
+    }
+  }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .calendar th{
+        font-size: 20px;
+    }
+    .day{
+        font-size: 20px;
+    }
+    .today{
+        font-size: 30px;
+    }
+    .event{
+        font-size: 12px;
+    }
+    .right {
+        width: 100%;
+        margin-left: 0;
+    }
+    .left{
+        width: 100%;
+    }
+  }

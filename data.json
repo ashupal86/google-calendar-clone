@@ -1,0 +1,70 @@
+{
+    "events": [
+      {
+        "title": "Republic Day",
+        "date": "2024-01-26",
+        "type": "festival"
+      },
+      {
+        "title": "Holi",
+        "date": "2024-03-25",
+        "type": "festival"
+      },
+      {
+        "title": "Good Friday",
+        "date": "2024-03-29",
+        "type": "festival"
+      },
+      {
+        "title": "Eid al-Fitr",
+        "date": "2024-04-10",
+        "type": "festival"
+      },
+      {
+        "title": "Independence Day",
+        "date": "2024-08-15",
+        "type": "festival"
+      },
+      {
+        "title": "Raksha Bandhan",
+        "date": "2024-08-19",
+        "type": "festival"
+      },
+      {
+        "title": "Ganesh Chaturthi",
+        "date": "2024-09-07",
+        "type": "festival"
+      },
+      {
+        "title": "Gandhi Jayanti",
+        "date": "2024-10-02",
+        "type": "festival"
+      },
+      {
+        "title": "Dussehra",
+        "date": "2024-10-12",
+        "type": "festival"
+      },
+      {
+        "title": "Diwali",
+        "date": "2024-11-01",
+        "type": "festival"
+      },
+      {
+        "title": "Christmas",
+        "date": "2024-12-25",
+        "type": "festival"
+      },
+      {
+        "title": "Team Meeting",
+        "date": "2024-11-28",
+        "type": "regular"
+      },
+      {
+        "title": "Project Deadline",
+        "date": "2024-11-30",
+        "type": "regular"
+      }
+    ]
+  }
+  
